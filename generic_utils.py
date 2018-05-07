@@ -2,6 +2,7 @@ from keras.utils import generic_utils
 
 def simple_progbar(steps):
     '''
+    Need to reinitialize this function before each epoch begins
     :param steps: Step inside an epoch
     :return:-
     '''
