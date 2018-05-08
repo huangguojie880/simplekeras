@@ -7,7 +7,7 @@ class GaussianSample(Layer):
     '''
     def __init__(self,batch_size, **kwargs):
         self.batch_size = batch_size
-        super(Sample_z, self).__init__(**kwargs)
+        super(GaussianSample, self).__init__(**kwargs)
 
     def build(self, input_shape):
         mu_shape = input_shape[0]
