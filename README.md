@@ -1,2 +1,2 @@
 # simplekeras
-Simplify some functions of keras
+Simplify and add some functions of keras
