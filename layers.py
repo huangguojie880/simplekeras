@@ -1,16 +1,16 @@
 from keras.layers import *
 
-class Sample_z(Layer):
+class GaussianSample(Layer):
     '''
     Gaussian distribution sampling given mean and variance
     The input has two values, the first is the mean and the second is the variance.
     '''
-    def __init__(self,batch_size, **kwargs):
-        self.batch_size = batch_size
-        super(Sample_z, self).__init__(**kwargs)
+    def __init__(self,**kwargs):
+        super(GaussianSample, self).__init__(**kwargs)
 
     def build(self, input_shape):
         mu_shape = input_shape[0]
+        self.batch_size = mu_shape[0]
         self.n_z = mu_shape[1]
         return mu_shape
 
@@ -21,4 +21,3 @@ class Sample_z(Layer):
 
     def compute_output_shape(self, input_shape):
         return input_shape[0]
-
