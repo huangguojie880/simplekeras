@@ -1,7 +1,3 @@
-'''
-Introduce:Show training status
-Examole:
-from keras.utils import generic_utils
-progbar = generic_utils.Progbar(epoch_num)
-progbar.update(step_num,[('name1', value1)), ('name2', value2)])
-'''
+    # after some time interval update the target model to be same with model
+    def update_target_model(self):
+        self.target_model.set_weights(self.model.get_weights())
